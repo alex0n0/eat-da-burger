@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eat Da Burger</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" href="/assets/css/burger_style.css"> -->
+
+    <style>
+        button.list-group-item-action {
+            box-shadow: none;
+            outline: none;
+        }
+
+        body {
+            min-width: 400px;
+
+            min-height: 100vh;
+            height: 100vh;
+            max-height: 100vh;
+        }
+
+        header {
+            height: 50px;
+        }
+
+        main {
+            height: calc(100vh - 50px - 70px);
+            max-height: calc(100vh - 50px - 70px);
+        }
+
+        footer {
+            height: 70px;
+        }
+
+        input#inputCreateBurger {
+            border-top-left-radius: 4px !important;
+            border-top-right-radius: 4px !important;
+        }
+
+        button#buttonCreateBurger {
+            border-bottom-left-radius: 4px !important;
+            border-bottom-right-radius: 4px !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="h-100 d-flex align-items-center bg-secondary shadow-sm px-3">
+            <p class="m-0" style="color: rgba(255, 255, 255, 0.7);">BASIC GRILL &middot; SINCE 1400</p>
+        </div>
+    </header>
+
+
+
+    <main class="container-fluid">
+        <div class="row h-100">
+            <div class="col-5 col-sm-4 col-md-3 col-xl-2 p-3 h-100 d-flex flex-column border-right">
+                <div class="mb-4 d-flex flex-column">
+                    <input id="inputCreateBurger" type="list" list="listBurgers" class="form-control rounded-0"
+                        placeholder="Enter a new burger">
+                    <datalist id="listBurgers">
+                        <option value="Angus Beef Burger">
+                        <option value="Black Bean Burgers">
+                        <option value="Wild Salmon Burgers">
+                        <option value="Veggie Burgers">
+                        <option value="Portobello Mushroom Burgers">
+                        <option value="Elk Burgers">
+                        <option value="Bacon Cheeseburger">
+                    </datalist>
+                    <button id="buttonCreateBurger" class="btn btn-success rounded-0">CREATE</button>
+                </div>
+
+
+
+
+
+                <p class="m-0 mb-2 pl-3 text-muted"><b>Quick Order</b></p>
+                <div class="list-group list-group-flush border rounded mt-0 overflow-auto">
+                    <p class="m-0 p-0 list-group-item text-center small bg-light text-dark border-0">TOP</p>
+                    <div>
+                        <button class="list-group-item list-group-item-action py-2 px-3 rounded-0">Angus Beef
+                            Burger</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Black Bean Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Wild Salmon
+                            Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Veggie Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Portobello Mushroom
+                            Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Elk Burgers</button>
+                        <button class="list-group-item list-group-item-action py-2 px-3">Bacon Cheeseburger</button>
+
+
+
+                        <button class="list-group-item list-group-item-action py-2 px-3 rounded-0">Bacon
+                            Cheeseburger</button>
+                    </div>
+                    <p class="m-0 p-0 list-group-item text-center small bg-light text-dark">BOTTOM</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col p-3 h-100">
+                <div class="container px-3 h-100 d-flex flex-column">
+                    <!-- delivered burgers -->
+                    <h6 id="burgersDeliveredHeading" class="mb-2">Delivered Burgers</h6>
+                    <div id="burgersDelivered" class="row align-items-start overflow-auto border rounded pt-3">
+
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Made 4 days ago</p>
+                                <button class="btn btn-secondary text-truncate">EAT</button>
+                            </div>
+                        </div>
+          
+                    
+
+                    </div>
+
+
+
+
+                    <!-- eaten burgers -->
+                    <h6 id="burgersEatenHeading" class="mb-2 d-none">Eaten Burgers</h6>
+                    <div id="burgersEaten" class="row h-100 overflow-auto border rounded pt-3 d-none">
+
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 pb-3">
+                            <div class="card p-3 overflow-hidden shadow-sm">
+                                <h5>Angus Beef Burger Lorem ipsum dolor sit amet.</h5>
+                                <p class="small text-muted text-truncate">Eaten 4 days ago</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <div class="p-2 h-100 d-flex bg-secondary shadow-sm">
+            <button id="buttonDelivered" class="ml-auto mr-2 btn btn-dark">Delivered</button>
+            <button id="buttonEaten" class="btn btn-dark">Eaten</button>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

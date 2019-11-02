@@ -1,0 +1,39 @@
+button.list-group-item-action {
+    box-shadow: none;
+    outline: none;
+}
+/* button.btn.btn-success:focus, button.btn.btn-success:active, button.btn.btn-secondary:focus {
+    box-shadow: none;
+    outline: 0;
+} */
+
+body {
+    min-width: 400px;
+    
+    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+header {
+    height: 50px;
+}
+
+main {
+    height: calc(100vh - 50px - 70px);
+    max-height: calc(100vh - 50px - 70px);
+}
+
+footer {
+    height: 70px;
+}
+
+input#inputCreateBurger {
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+button#buttonCreateBurger {
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
