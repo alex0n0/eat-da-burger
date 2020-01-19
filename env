@@ -1,0 +1,6 @@
+#API keys
+
+DB_HOST=localhost
+DB_USER=username
+DB_PASSWORD=password
+DB_DATABASE=db_name
