@@ -4,6 +4,8 @@ App allows you to create and remove burgers and keep track of their time of orig
 
 [Click here](https://beanstalk99.herokuapp.com/) for an interactive demo.
 
+![screenshot 1](/public/screenshot_1.png)
+
 ## Features
 
 - Single page application
